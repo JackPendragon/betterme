@@ -1,0 +1,21 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/action_trophys"
+        android:icon="@drawable/ic_grade_black_24dp"
+        android:title="@string/action_trophys"
+        />
+
+    <item
+        android:id="@+id/action_statistics"
+        android:icon="@drawable/ic_pie_chart_outlined_black_24dp"
+        android:title="@string/action_statistics"
+        />
+
+    <item
+        android:id="@+id/action_plan_next_day"
+        android:icon="@drawable/ic_event_black_24dp"
+        android:title="@string/action_plan_next_day"
+        />
+
+</menu>

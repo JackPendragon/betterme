@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <string name="app_name">BetterMe</string>
+    <string name="action_statistics">Statistiken</string>
+    <string name="action_plan_next_day">Plane einen Tag</string>
+    <string name="input_activity">Aktivität</string>
+    <string name="button_cancel">X</string>
+    <string name="button_save">Speichern</string>
+    <string name="textview_to">bis</string>
+    <string name="input_description">Beschreibung</string>
+    <string name="textview_save_as">Speichern als ...</string>
+    <string name="textview_choose_template">Wähle deine Vorlage:</string>
+    <string name="textview_start_time">Tab für Startzeitpunkt</string>
+    <string name="textview_end_time">Tab für Endzeitpunkt</string>
+
+    <string-array name="save_as">
+        <item name="save_as_template">Vorlage</item>
+        <item name="save_as_dont_save">Nicht abspeichern</item>
+        <item name="save_as_new_habit">Neue Gewohnheit</item>
+    </string-array>
+    <string name="toast_save">Speichern erfolgreich</string>
+    <string name="action_choose">Bitte wählen ...</string>
+    <string name="toast_delete">Erfolgreich gelöscht</string>
+    <string name="if_delete_spinner">Aus dem Spinner Löschen</string>
+    <string name="button_yes">Ja</string>
+    <string name="button_no">Nein</string>
+    <string name="textview_are_you_sure">Bist du sicher?</string>
+    <string name="toast_delete_successfully">Löschen erfolgreich!</string>
+    <string name="action_trophys">Trophäen</string>
+    <string name="textview_planning_walker">Planungs-Walker</string>
+    <string name="textview_planning_jogger">Planungs-Jogger</string>
+    <string name="textview_planning_runner">Planungs-Sprinter</string>
+    <string name="textview_planning_athletic">Planungs-Athlet</string>
+    <string name="textview_habit_walker">Gewohnheits-Walker</string>
+    <string name="textview_habit_jogger">Gewohnheits-Jogger</string>
+    <string name="textview_habit_runner">Gewohnheits-Sprinter</string>
+    <string name="textview_trophy">Trophäen</string>
+    <string name="textview_habit_athletic">Gewohnheits-Athlet</string>
+    <string name="textview_day_activity">"Aktivität vom: "</string>
+    <string name="textview_activity_label">"Aktivität: "</string>
+    <string name="textview_activity_hours">In Stunden</string>
+    <string name="textview_habit_label">Meine Gewohnheit</string>
+    <string name="textview_habit_progress">Gewohnheitsfortschritt</string>
+    <string name="textview_enforcement_quote">Durchführungsquote in %</string>
+    <string name="please_select">Bitte wählen ...</string>
+</resources>

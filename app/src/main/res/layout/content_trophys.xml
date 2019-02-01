@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:weightSum="100"
+    android:descendantFocusability="blocksDescendants"
+    android:background="@drawable/rounded_background"
+    android:layout_gravity="center">
+
+    <LinearLayout
+        android:id="@+id/linearlayout_1"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="50"
+        android:layout_marginTop="30dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginBottom="20dp">
+
+        <View
+            android:id="@+id/view_walking"
+            android:layout_gravity="center"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:background="@mipmap/walk"/>
+
+        <TextView
+            android:id="@+id/textview_planning_walking"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/textview_planning_walker"
+            android:layout_marginBottom="20dp"/>
+
+        <View
+            android:id="@+id/view_running"
+            android:layout_gravity="center"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:background="@mipmap/running"/>
+
+        <TextView
+            android:id="@+id/textview_planning_runner"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/textview_planning_runner"
+            android:layout_marginBottom="20dp"/>
+
+        <View
+            android:id="@+id/view_habit_walker"
+            android:layout_gravity="center"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:background="@mipmap/bronze"/>
+
+        <TextView
+            android:id="@+id/textview_walker"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/textview_habit_walker"
+            android:layout_marginBottom="20dp"/>
+
+        <View
+            android:id="@+id/view_habit_runner"
+            android:layout_gravity="center"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:background="@mipmap/gold"/>
+
+        <TextView
+            android:id="@+id/textview_runner"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/textview_habit_runner"
+            android:layout_marginBottom="20dp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearlayout_2"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="25"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="20dp">
+
+        <View
+            android:id="@+id/view_jogging"
+            android:layout_gravity="center"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:background="@mipmap/jogging"/>
+
+        <TextView
+            android:id="@+id/textview_jogging"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/textview_planning_jogger"
+            android:layout_marginBottom="20dp"/>
+
+        <View
+            android:id="@+id/view_athletic"
+            android:layout_gravity="center"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:background="@mipmap/athletic"/>
+
+        <TextView
+            android:id="@+id/textview_athletic"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/textview_planning_athletic"
+            android:layout_marginBottom="20dp"/>
+
+        <View
+            android:id="@+id/view_habit_jogging"
+            android:layout_gravity="center"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:background="@mipmap/silver"/>
+
+        <TextView
+            android:id="@+id/textview_"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/textview_habit_jogger"
+            android:layout_marginBottom="20dp"/>
+
+        <View
+            android:id="@+id/view_habit_athletic"
+            android:layout_gravity="center"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:background="@mipmap/medal"/>
+
+        <TextView
+            android:id="@+id/textview_habit_athletic"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/view_habit_athletic"
+            android:text="@string/textview_habit_athletic"
+            android:layout_marginBottom="20dp"/>
+    </LinearLayout>
+</LinearLayout>

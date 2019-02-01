@@ -1,0 +1,45 @@
+<resources>
+    <string name="app_name">BetterMe</string>
+    <string name="action_statistics">Statistics</string>
+    <string name="action_plan_next_day">Plan a day</string>
+    <string name="input_activity">Activity</string>
+    <string name="button_cancel">X</string>
+    <string name="button_save">Save</string>
+    <string name="textview_to">to</string>
+    <string name="input_description">Description</string>
+    <string name="textview_save_as">Save as ...</string>
+    <string name="textview_choose_template">Choose a template:</string>
+    <string name="textview_start_time">Tab to set the start time</string>
+    <string name="textview_end_time">Tab to set the end time</string>
+
+    <string-array name="save_as">
+        <item name="save_as_template">Template</item>
+        <item name="save_as_dont_save">Dont save</item>
+        <item name="save_as_new_habit">New habit</item>
+    </string-array>
+    <string name="toast_save">Saved successfully</string>
+    <string name="action_choose">Please choose ...</string>
+    <string name="toast_delete">Delete successful</string>
+    <string name="if_delete_spinner">Delete from spinner</string>
+    <string name="button_yes">Yes</string>
+    <string name="button_no">No</string>
+    <string name="textview_are_you_sure">Are you sure?</string>
+    <string name="toast_delete_successfully">Delete successfully!</string>
+    <string name="action_trophys">Trophys</string>
+    <string name="textview_planning_walker">Planning Walker</string>
+    <string name="textview_planning_jogger">Planning Jogger</string>
+    <string name="textview_planning_runner">Planning Runner</string>
+    <string name="textview_planning_athletic">Planning Athletic</string>
+    <string name="textview_habit_walker">Habit Walker</string>
+    <string name="textview_habit_jogger">Habit Jogger</string>
+    <string name="textview_habit_runner">Habit Runner</string>
+    <string name="textview_trophy">Trophys</string>
+    <string name="textview_habit_athletic">Habit Athlete</string>
+    <string name="textview_day_activity">"Activitiy from: "</string>
+    <string name="textview_activity_label">"Activity: "</string>
+    <string name="textview_activity_hours">In hours</string>
+    <string name="textview_habit_label">My Habit</string>
+    <string name="textview_habit_progress">Habit Progress</string>
+    <string name="textview_enforcement_quote">Enforcement Quote in %</string>
+    <string name="please_select">Please select ...</string>
+</resources>
