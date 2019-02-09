@@ -42,4 +42,7 @@
     <string name="textview_habit_progress">Habit Progress</string>
     <string name="textview_enforcement_quote">Enforcement Quote in %</string>
     <string name="please_select">Please select ...</string>
+    <string name="warning_select_time">Please select the time!</string>
+    <string name="warning">Unknow Error</string>
+    <string name="warning_no_statistics">No Statistics</string>
 </resources>

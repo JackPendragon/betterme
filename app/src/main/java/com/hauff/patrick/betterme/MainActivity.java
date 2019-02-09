@@ -179,7 +179,7 @@ public class MainActivity extends AppCompatActivity implements TimePickerDialog.
                     openTrophyPopUp();
                 }
                 else if(menuItem.getTitle() == getString(R.string.action_statistics)){
-                    goToStatistics(dayList, habitList);
+                    goToStatistics();
                 }
                 return true;
             }
@@ -286,21 +286,25 @@ public class MainActivity extends AppCompatActivity implements TimePickerDialog.
                 if(templateList == null) templateList = new ArrayList<>();                          //Init the template list
                 if(activitysOfTheDayList == null) activitysOfTheDayList = new ArrayList<>();        //Init the activity of the day list
 
-                if(countSelectedSpinnerLetters == 8 || countSelectedSpinnerLetters == 7 ||          //Save only habits and templates to SharedPrefs
-                        countSelectedSpinnerLetters == 15 || countSelectedSpinnerLetters == 19){
-                    entry = new Entry(activity, startTime, endTime, description, saveAs, false);
-                    templateList.add(entry);
-                    mySharedPreferencesTemplates.saveEntrysIntoSharedPreferences(templateList, activity);
-                    mySharedPreferencesTemplates.reloadTemplates(templateList, activityFromTemplatesList, key, cache );
+                if(startTime.length() <= 5 && endTime.length() <= 5) {
+                    if (countSelectedSpinnerLetters == 8 || countSelectedSpinnerLetters == 7 ||          //Save only habits and templates to SharedPrefs
+                            countSelectedSpinnerLetters == 15 || countSelectedSpinnerLetters == 19) {
+                        entry = new Entry(activity, startTime, endTime, description, saveAs, false);
+                        templateList.add(entry);
+                        mySharedPreferencesTemplates.saveEntrysIntoSharedPreferences(templateList, activity);
+                        mySharedPreferencesTemplates.reloadTemplates(templateList, activityFromTemplatesList, key, cache);
+                    }
+                    activitysOfTheDayList.clear();
+                    entry = new Entry(activity, startTime, endTime, description, saveAs, false);  //Prepare a Entry Object and save it
+                    activitysOfTheDayList.add(entry);
+                    mySharedPreferencesDays.saveEntrysIntoSharedPreferences(activitysOfTheDayList, date);
+
+                    showDayList();
+
+                    Toast.makeText(MainActivity.this, R.string.toast_save, Toast.LENGTH_SHORT).show();
+                }else{
+                    Toast.makeText(MainActivity.this, R.string.warning_select_time, Toast.LENGTH_SHORT).show();
                 }
-                activitysOfTheDayList.clear();
-                entry = new Entry(activity, startTime, endTime, description, saveAs, false);  //Prepare a Entry Object and save it
-                activitysOfTheDayList.add(entry);
-                mySharedPreferencesDays.saveEntrysIntoSharedPreferences(activitysOfTheDayList, date);
-
-                showDayList();
-
-                Toast.makeText(MainActivity.this, R.string.toast_save, Toast.LENGTH_SHORT).show();
             }
         });
 
@@ -332,17 +336,22 @@ public class MainActivity extends AppCompatActivity implements TimePickerDialog.
 
     /**
      * Method to navigate to the statistics activity with the daylist, habitlist and the selected date
-     *
-     * @param dList Our dayList
-     * @param hList Our habitsList
      */
-    public void goToStatistics(ArrayList<Entry> dList, ArrayList<HabitStatistics> hList){
-        Intent intentToStatistics = new Intent(myDialog.getContext(), StatisticsActivity.class);
-        intentToStatistics.putExtra("dayList", dList);
-        intentToStatistics.putExtra("habitList", hList);
-        intentToStatistics.putExtra("date", date);
-        startActivity(intentToStatistics);
-        overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
+    public void goToStatistics(){
+
+        dayList = mySharedPreferencesDays.getEntrySharedPrefs(date, dayList);
+        habitList = mySharedPreferencesDays.getMyHabitsFromSharedPrefs();
+
+        if(dayList.size() > 0 && habitList.size() > 0) {
+            Intent intentToStatistics = new Intent(myDialog.getContext(), StatisticsActivity.class);
+            intentToStatistics.putExtra("dayList", dayList);
+            intentToStatistics.putExtra("habitList", habitList);
+            intentToStatistics.putExtra("date", date);
+            startActivity(intentToStatistics);
+            overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
+        }else{
+            Toast.makeText(MainActivity.this, R.string.warning_no_statistics, Toast.LENGTH_SHORT).show();
+        }
     }
 
     /**

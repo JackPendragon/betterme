@@ -8,9 +8,11 @@ import android.support.design.widget.TextInputEditText;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.Spinner;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
+import com.hauff.patrick.betterme.MainActivity;
 import com.hauff.patrick.betterme.habit_statistics.HabitStatistics;
 import com.hauff.patrick.betterme.day.Day;
 import com.hauff.patrick.betterme.entry.Entry;
@@ -62,23 +64,27 @@ public class MySharedPreferences extends AppCompatActivity {
 
         String isEmpty = myPrefs.getString(key, "isEmpty");
 
-        if(isEmpty.equals("isEmpty") || isEmpty.equals("[]")){                                      //save complete list into SharedPreds when SharedPrefs is empty
-            cache = list;
-        }else if(!isEmpty.equals("isEmpty")){                                                       //Fill it with the isDone variables
-            for(int i = 0; i < list.size(); i++) {
-                if(cache.size() > 0){
-                    if(list.get(i).getActivity().equals(cache.get(i).getActivity()))
-                       cache.get(i).setDone(list.get(i).isDone());
-                    else cache.add(list.get(i));
+        try {
+            if(isEmpty.equals("isEmpty") || isEmpty.equals("[]")){                                      //save complete list into SharedPreds when SharedPrefs is empty
+                cache = list;
+            }else if(!isEmpty.equals("isEmpty")){                                                       //Fill it with the isDone variables
+                for(int i = 0; i < list.size(); i++) {
+                    if(cache.size() > 0){
+                        if(list.get(i).getActivity().equals(cache.get(i).getActivity())) {
+                            cache.get(i).setDone(list.get(i).isDone());
+                        }
+                        else cache.add(list.get(i));
+                    }
                 }
+            }else if(isEmpty.equals("isEmpty")){                                                        //save complete list into SharedPreds
+                cache = list;
             }
-        }else if(isEmpty.equals("isEmpty")){                                                        //save complete list into SharedPreds
-            cache = list;
-        }
 
-        json = gson.toJson(cache);
-        prefEditor.putString(key, json);
-        prefEditor.apply();
+            json = gson.toJson(cache);
+            prefEditor.putString(key, json);
+            prefEditor.apply();
+
+        }catch (Exception e){}
     }
 
     /**

@@ -43,4 +43,7 @@
     <string name="textview_habit_progress">Gewohnheitsfortschritt</string>
     <string name="textview_enforcement_quote">Durchführungsquote in %</string>
     <string name="please_select">Bitte wählen ...</string>
+    <string name="warning_select_time">Bitte wählen Sie einen Zeitraum!</string>
+    <string name="warning">Unbekannter Fehler</string>
+    <string name="warning_no_statistics">Noch keine Statistiken vorhanden!</string>
 </resources>
